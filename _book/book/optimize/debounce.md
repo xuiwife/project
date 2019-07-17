@@ -14,23 +14,8 @@
 ##### n.1.3 实例
 >模拟在输入框输入后，进行ajax查询，没有添加防抖的时候
 
-<div class="wrapper">
-  <div class="item">
-    <input placeholder="请输入内容" id="debounce">
+
+<div class="item">
+    <input  type="text" placeholder="请输入内容">
     <p class="line"></p>
   </div>
-  <div class="result" id="debounceResult"></div>
-</div>
-
-<script type="text/javascript">
- var OInput = document.getElementById('debounce');
- var OResult = document.getElementById('debounceResult');
- var num = 0;
- function Ajax(content,num){
-  OResult.innerHTML = `查询了${num}次，查询的内容是${content}`
- }
- OInput.addEventListener('keyup',(e) => {
-   num ++ ;
-   Ajax(e.target.value,num)
- },false)
-</script>
