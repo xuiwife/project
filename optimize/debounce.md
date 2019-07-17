@@ -27,10 +27,41 @@
  var OResult = document.getElementById('debounceResult');
  var num = 0;
  function Ajax(content,num){
-  OResult.innerHTML = `查询了${num}次，查询的内容是${content}`
+  OResult.innerHTML = `查询了${num}次`
  }
  OInput.addEventListener('keyup',(e) => {
    num ++ ;
    Ajax(e.target.value,num)
  },false)
 </script>
+```html
+<div class="wrapper">
+  <div class="item">
+    <input placeholder="请输入内容" id="debounce">
+    <p class="line"></p>
+  </div>
+  <div class="result" id="debounceResult"></div>
+</div>
+```
+```js
+ var OInput = document.getElementById('debounce');
+ var OResult = document.getElementById('debounceResult');
+ var num = 0;
+ function Ajax(content,num){
+  OResult.innerHTML = `查询了${num}次`
+ }
+ OInput.addEventListener('keyup',(e) => {
+   num ++ ;
+   Ajax(e.target.value,num)
+ },false)
+```
+
+>添加防抖后的效果
+
+<div class="wrapper">
+  <div class="item">
+    <input placeholder="请输入内容" id="debounce">
+    <p class="line"></p>
+  </div>
+  <div class="result" id="debounceResult"></div>
+</div>
