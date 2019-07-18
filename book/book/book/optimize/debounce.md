@@ -35,7 +35,6 @@
    Ajax(e.target.value,num)
  },false)
 </script>
-
 ```html
 <div class="wrapper">
   <div class="item">
@@ -75,32 +74,31 @@
  var nums = 0,timer = null;
  function Ajax1(){
    nums ++;
+   console.log('nums',nums)
    OResult1.innerHTML=`查询了${nums}次`
  }
  OInput1.addEventListener('keydown',()=>{
    clearTimeout(timer);
    timer = setTimeout(()=>{
+     console.log(1)
      Ajax1()
-   },500)
+   },1000)
  })
 </script>
-
 ```js
  var OInput1 = document.getElementById('debounce1');
  var OResult1 = document.getElementById('debounceResult1');
  var nums = 0,timer = null;
  function Ajax1(){
    nums ++;
+   console.log('nums',nums)
    OResult1.innerHTML=`查询了${nums}次`
  }
  OInput1.addEventListener('keydown',()=>{
    clearTimeout(timer);
    timer = setTimeout(()=>{
+     console.log(1)
      Ajax1()
-   },500)
+   },1000)
  })
 ```
-
->在github里面，新建创库的时候，就用到了防抖的技巧，感兴趣的话，可以去check一下
-
-![avatar](/images/eg01.png)
