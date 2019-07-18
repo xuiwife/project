@@ -8,19 +8,19 @@
  }
 
  .item {
-     width: 400px;
-     height: 40px;
+     /* width: 400px;
+     height: 40px; */
      display: block;
      position: relative;
  }
 
  .result {
-     padding: 10px;
-     word-break: break-all;
+     line-height: 40px;
+     padding-left: 10px;
  }
 
  input {
-     width: 380px;
+     width: 300px;
      padding: 0 10px;
      height: 40px;
      border: 1px solid #dbdbdb;
@@ -45,5 +45,5 @@
  }
 
  input:focus+.line {
-     width: calc(100%-2px);
+     width: calc(100% - 2px);
  }
