@@ -2,4 +2,5 @@
 
 * [n.优化](optimize/README.md)
     * [n.1 防抖 debounce](optimize/debounce.md)
+    * [n.2 节流 throttle](optimize/throttle.md)
 
