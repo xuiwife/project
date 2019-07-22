@@ -11,42 +11,105 @@
 （2）在页面的无限加载场景下，需要用户在滚动页面时，每隔一段时间，发一次ajax请求，而不是在用户停下滚动页面操作时才去请求数据,监听滚轮事件，比如是否滑到底部自动加载更多，用throttle来判断
 
 ##### n.2.3 实例
-<div class="wrapper">
-  <div class="item">
-    <input placeholder="请输入内容" id="throttle">
-    <p class="line"></p>
+>没有加节流的时候
+
+<div class="mb">
+  <div id="throttleResult" style="color:red"></div>
+  <div class="throttle" id="throttle">
+    <div>滚动一下试试看</div>
   </div>
-  <div class="result" id="throttleResult"></div>
 </div>
 
 <script type="text/javascript">
-  var OThrottle = document.getElementById('throttle');
-  var OThrottleResult = document.getElementById('throttleResult');
-  var delay=100,last,now,timer=null;
-  function throttleAjax(){
-    console.log('throttle')
-  }
-
-  function throttle(){
-    now = new Date().getTime();
-    console.log(now-last)
-    if(now - last < delay) {
-      clearTimeout (timer);
-      timer = setTimeout(()=>{
-        last = now
-        console.log(1)
-        throttleAjax()
-      },delay)
-      // console.log(1)
-    } else {
-      last = now
-      console.log(2)
-      throttleAjax()
-    }
-    
-  }
-
-  OThrottle.addEventListener('keydown',()=>{
-    throttle()
-  })
+var Othrottle = document.getElementById('throttle');
+var OThrottleResult = document.getElementById('throttleResult');
+var num = 0;
+function ajax(){
+  num ++ ;
+  OThrottleResult.innerHTML = `执行了${num}次`
+}
+Othrottle.addEventListener('scroll',()=>{
+  ajax()
+})
 </script>
+
+```js
+var Othrottle = document.getElementById('throttle');
+var OThrottleResult = document.getElementById('throttleResult');
+var num = 0;
+function ajax(){
+  num ++ ;
+  OThrottleResult.innerHTML = `执行了${num}次`
+}
+Othrottle.addEventListener('scroll',()=>{
+  ajax()
+})
+```
+
+>添加节流后
+
+<div class="mb">
+  <div id="throttleResult1" style="color:red"></div>
+  <div class="throttle" id="throttle1">
+    <div>滚动一下试试看</div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var Othrottle1 = document.getElementById('throttle1');
+var OThrottleResult1 = document.getElementById('throttleResult1');
+var num1 = 0; 
+var startTime,currentTime,timer;
+function ajax1(){
+  num1++;
+  OThrottleResult1.innerHTML = `执行了${num1}次`
+}
+function throttle(delay){
+  currentTime = new Date().getTime();
+  var remaning = delay - (currentTime - startTime);
+  clearTimeout(timer)
+  if(remaning<=0){
+    ajax1();
+    startTime = currentTime
+  } else {
+    timer = setTimeout(()=>{
+      ajax1();
+      startTime = currentTime
+    },remaning)
+  }
+
+}
+Othrottle1.addEventListener('scroll',()=>{
+  throttle(1000)
+})
+</script>
+
+```js
+var Othrottle1 = document.getElementById('throttle1');
+var OThrottleResult1 = document.getElementById('throttleResult1');
+var num1 = 0; 
+var startTime=new Date().getTime(),currentTime,timer;
+function ajax1(){
+  num1++;
+  OThrottleResult1.innerHTML = `执行了${num1}次`
+}
+function throttle(delay){
+  currentTime = new Date().getTime();
+  var remaning = delay - (currentTime - startTime);
+  clearTimeout(timer)
+  if(remaning<=0){
+    ajax1();
+    startTime = currentTime
+  } else {
+    timer = setTimeout(()=>{
+      ajax1();
+      startTime = currentTime
+    },remaning)
+  }
+
+}
+Othrottle1.addEventListener('scroll',()=>{
+  throttle(1000)
+})
+```
+
