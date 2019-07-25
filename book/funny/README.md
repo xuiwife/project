@@ -2,4 +2,4 @@
 
 #### 记录的特效
 
-[1.水印](watermark/index.html)
+[1.文字水印](https://kateli.github.io/project/book/funny/watermark/index.html)

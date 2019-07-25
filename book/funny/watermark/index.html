@@ -80,8 +80,16 @@
       var body = document.body;
       var ctx = cans.getContext("2d");
       ctx.rotate(rotate * Math.PI / 180)
-      ctx.font = "16px Microsoft JhengHei"
-      ctx.fillStyle = "rgba(17, 17, 17, 0.50)";
+      ctx.font = "16px Microsoft JhengHei";
+      var grd = ctx.createLinearGradient(0, 0, 200, 0);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(0.2, "orange");
+      grd.addColorStop(0.4, "yellow");
+      grd.addColorStop(0.6, "green");
+      grd.addColorStop(0.8, "blue");
+      grd.addColorStop(1, "purple");
+      ctx.fillStyle = grd;
+      // ctx.fillStyle = "rgba(17, 17, 17, 0.50)";
       ctx.textBaseline = 'Middle';
       ctx.fillText(options.str, 10, 50);
       var imageSrc = cans.toDataURL();

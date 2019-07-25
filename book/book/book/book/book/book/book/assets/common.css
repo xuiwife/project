@@ -5,11 +5,10 @@
 
  .wrapper {
      display: flex;
+     margin-bottom: .85em;
  }
 
  .item {
-     /* width: 400px;
-     height: 40px; */
      display: block;
      position: relative;
  }
