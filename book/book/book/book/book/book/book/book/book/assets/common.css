@@ -1,0 +1,49 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ .wrapper {
+     display: flex;
+ }
+
+ .item {
+     /* width: 400px;
+     height: 40px; */
+     display: block;
+     position: relative;
+ }
+
+ .result {
+     line-height: 40px;
+     padding-left: 10px;
+ }
+
+ input {
+     width: 300px;
+     padding: 0 10px;
+     height: 40px;
+     border: 1px solid #dbdbdb;
+     outline: none;
+     font-size: 16px;
+     border-radius: 3px;
+     background: none;
+ }
+
+ .line {
+     content: "";
+     display: inline-block;
+     width: 0;
+     height: 2px;
+     background: red;
+     position: absolute;
+     left: 1px;
+     bottom: 1px;
+     transition: width 1s;
+     margin-bottom: 0 !important;
+
+ }
+
+ input:focus+.line {
+     width: calc(100% - 2px);
+ }

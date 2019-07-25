@@ -66,13 +66,35 @@
     rotate: 30
     })
   */
+    var arr = ["傻", "猪", "蠢"];
+    var arr2 = ["厉害", "666", "牛", "赞"];
+
+    function checkWords(str) {
+      let b = true
+      if (str.trim().length === 0) {
+        alert('输入点啥吧，不要输入太多空格啦');
+        b = false;
+      }
+      if (str.indexOf('love') !== -1 || str.indexOf('爱') !== -1) {
+        alert("原来你对我爱意满满呀")
+      }
+      if (str.indexOf('会') !== -1) {
+        alert("你怎么知道我的名字包含会")
+      }
+
+      if (arr.findIndex(item => str.indexOf(item) !== -1) !== -1) {
+        alert("不许说脏话骂你自己，注意素质");
+        b = false
+      }
+      if (arr2.findIndex(item => str.indexOf(item) !== -1) !== -1) {
+        alert("谢谢赞赏，你真识货");
+      }
+      return b
+    }
 
     function addWaterMark(options) {
       if (!options) options = {}
-      if (options.str.trim().length === 0) {
-        alert('输入点啥吧，不要输入太多空格啦');
-        return false;
-      }
+      if (!checkWords(options.str)) return false;
       var cans = document.createElement('canvas');
       var rotate = options.rotate === undefined ? -30 : options.rotate
       cans.width = options.width === undefined ? 200 : options.width;

@@ -35,6 +35,7 @@
    Ajax(e.target.value,num)
  },false)
 </script>
+
 ```html
 <div class="wrapper">
   <div class="item">
@@ -74,31 +75,28 @@
  var nums = 0,timer = null;
  function Ajax1(){
    nums ++;
-   console.log('nums',nums)
    OResult1.innerHTML=`查询了${nums}次`
  }
  OInput1.addEventListener('keydown',()=>{
    clearTimeout(timer);
    timer = setTimeout(()=>{
-     console.log(1)
      Ajax1()
-   },1000)
+   },500)
  })
 </script>
+
 ```js
  var OInput1 = document.getElementById('debounce1');
  var OResult1 = document.getElementById('debounceResult1');
  var nums = 0,timer = null;
  function Ajax1(){
    nums ++;
-   console.log('nums',nums)
    OResult1.innerHTML=`查询了${nums}次`
  }
  OInput1.addEventListener('keydown',()=>{
    clearTimeout(timer);
    timer = setTimeout(()=>{
-     console.log(1)
      Ajax1()
-   },1000)
+   },500)
  })
 ```
