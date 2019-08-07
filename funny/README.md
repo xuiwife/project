@@ -8,4 +8,6 @@
 
   [3.自定义背景添加自定义水印](https://kateli.github.io/project/book/funny/watermark/index2.html)
 
+##### 小游戏：
+  [1.拼图游戏](https://kateli.github.io/project/book/funny/game/index.html)
  

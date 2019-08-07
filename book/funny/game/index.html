@@ -120,7 +120,7 @@
     <button id="reset">重置</button>
   </div>
   <div class="step">
-    当前步数：<span>xx</span>步
+    当前步数：<span id="num">0</span>步
   </div>
   <div class="btns">
     <button data-type="1">↑</button>
@@ -129,58 +129,72 @@
     <button data-type="4">→</button>
   </div>
   <script type="text/javascript">
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 0];
-    let num = 0;
-    let oReset = document.querySelector("#reset");
+    let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     let oPuzzle = document.querySelector('.puzzle');
-    let oBtns = document.querySelector(".btns");
-    var currentArr = []
+    let oBtns = document.querySelector('.btns');
+    let oReset = document.querySelector('#reset');
+    let oNum = document.querySelector('#num');
+    let currentArr = arr.sort(() => Math.random() - 0.5);
+    let num=0;
 
-    function initArr() {
-      return arr.sort(() => {
-        return Math.random() - 0.5
-      })
-    }
-
-    function render() {
-      currentArr = initArr()
-      oPuzzle.innerHTML = ""
-      arr.forEach(item => {
+    render(currentArr)
+    //创建九宫格
+    function render(currentArr) {
+      oPuzzle.innerHTML = "";
+      currentArr.forEach(item => {
         let oDiv = document.createElement('div');
-        item = item === 0 ? "" : item
-        oDiv.innerHTML = item;
+        item = item ? item : ""
+        oDiv.innerHTML = item
         oPuzzle.appendChild(oDiv)
       })
+      if (currentArr.join('') === '123456780') {
+        alert("好厉害，拼成功了")
+      }
     }
 
-    render()
-    oReset.onclick = render
+    //重置：
+    oReset.onclick=function(){
+      currentArr = arr.sort(() => Math.random() - 0.5);
+      render(currentArr)
+    }
+
+    // 控制键
     oBtns.addEventListener('click', (e) => {
-      let type = e.target.getAttribute("data-type");
-      const zero = currentArr.indexOf(0);
-      let target = null
+      let type = e.target.getAttribute('data-type');
+      let zero = currentArr.indexOf(0);
+      let target;
       if (type) {
         if (type === "1") {
-          if (zero < 3) {
+          if (zero > 5) {
             return false
+          }
+          target = zero + 3
+        }
+        if (type === "2") {
+          if (zero < 3) {
+            return false;
           }
           target = zero - 3
         }
-        if (type === "2") {
-
-        }
         if (type === "3") {
-
+          if ([2, 5, 8].includes(zero)) {
+            return false
+          }
+          target = zero + 1
         }
         if (type === "4") {
-
+          if ([0, 3, 6].includes(zero)) {
+            return false
+          }
+          target = zero - 1
         }
+        num++;
+        oNum.innerHTML = num;
+        let temp = currentArr[target]
+        currentArr[target] = 0;
+        currentArr[zero] = temp;
+        render(currentArr)
       }
-
-      let temp = currentArr[target]
-      currentArr[target] = currentArr[zero];
-      currentArr[zero] = temp;
-      console.log(currentArr)
     }, false)
   </script>
 </body>
