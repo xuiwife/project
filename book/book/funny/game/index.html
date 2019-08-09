@@ -135,7 +135,7 @@
     let oReset = document.querySelector('#reset');
     let oNum = document.querySelector('#num');
     let currentArr = arr.sort(() => Math.random() - 0.5);
-    let num = 0;
+    let num=0;
 
     render(currentArr)
     //创建九宫格
@@ -153,7 +153,7 @@
     }
 
     //重置：
-    oReset.onclick = function () {
+    oReset.onclick=function(){
       currentArr = arr.sort(() => Math.random() - 0.5);
       render(currentArr)
     }
@@ -189,7 +189,7 @@
           target = zero - 1
         }
         num++;
-        oNum.innerHTML = num;
+        oNu2.innerHTML = num;
         let temp = currentArr[target]
         currentArr[target] = 0;
         currentArr[zero] = temp;
