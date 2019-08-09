@@ -1,4 +1,4 @@
-<link rel="stylesheet"  href="../assets/commo1.css">
+<link rel="stylesheet"  href="../assets/common.css">
 
 # 1.1 debounce
 
