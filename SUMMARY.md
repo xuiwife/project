@@ -4,6 +4,7 @@
     * [1.1 防抖 debounce](optimize/debounce.md)
     * [1.2 节流 throttle](optimize/throttle.md)
     * [1.3 http缓存机制和原理](optimize/http.md)
+    * [1.4 前端路由跳转基本原理](optimize/router.md)
 
 * [2.特效](funny/README.md)
     * [2.1 自定义文字背景水印](funny/watermark/watermark01.md)
