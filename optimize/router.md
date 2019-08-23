@@ -71,3 +71,17 @@ window.addEventListener("hashchange", function() {
 实现原理：
 
 HTML5新增的历史记录API可以实现无刷新更改地址栏链接，配合Ajax可以做到无刷新跳转。
+
+```js
+window.history.pushState(null,null,"/profile/")
+```
+
+popstate事件
+
+当用户点击浏览器的【前进】、【后退】按钮时，或者使用js调用back，forward，go方法时，就会触发popstate事件。你可以监听这一事件，从而做出反应。
+```js
+window.addEventListener("popstate",(e)=>{
+	var state = e.state
+})
+```
+e.state就是当初pushState时传入的第一个参数，state对象可以是任何可以序列化的东西。由于火狐会将这些对象存储在用户的磁盘上，所以用户在重启浏览器之后，这些state对象就会恢复。

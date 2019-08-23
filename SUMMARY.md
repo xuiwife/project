@@ -13,4 +13,5 @@
     * [2.4 拼图游戏](funny/game/puzzle.md)
 
 * [3.css](css/README.md)
-    * [3.1 pointer-events]()
+    * [3.1 pointer-events](css/pointerEvents.md)
+                               
