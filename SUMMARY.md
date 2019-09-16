@@ -14,4 +14,5 @@
 
 * [3.css](css/README.md)
     * [3.1 pointer-events](css/pointerEvents.md)
+    * [3.2 flex布局](css/flex.md)
                                
