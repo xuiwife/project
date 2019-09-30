@@ -15,4 +15,8 @@
 * [3.css](css/README.md)
     * [3.1 pointer-events](css/pointerEvents.md)
     * [3.2 flex布局](css/flex.md)
+	
+* [4.es6](es6/README.md)
+    * [4.1 constant](es6/constant.md)
+	* [4.2 scop](es6/scop.md)
                                
