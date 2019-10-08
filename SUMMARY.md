@@ -17,6 +17,7 @@
     * [3.2 flex布局](css/flex.md)
 	
 * [4.es6](es6/README.md)
-    * [4.1 constant](es6/constant.md)
-	* [4.2 scop](es6/scop.md)
+    * [4.1 常量](es6/constant.md)
+	* [4.2 作用域](es6/scop.md)
+	* [4.3 箭头函数](es6/function.md)
                                
