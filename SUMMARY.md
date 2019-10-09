@@ -20,4 +20,5 @@
     * [4.1 常量](es6/constant.md)
 	* [4.2 作用域](es6/scop.md)
 	* [4.3 箭头函数](es6/function.md)
+	* [4.4 对象代理](es6/proxy.md)
                                

@@ -258,14 +258,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" >
+        <li class="chapter " data-level="1.4.1" data-path="../css/pointerEvents.html">
             
-                <span>
+                <a href="../css/pointerEvents.html">
             
                     
                     3.1 pointer-events
             
-                </span>
+                </a>
             
 
             
@@ -385,6 +385,15 @@ window.addEventListener('hashchange',()=>{
 <p>&#x8FD9;&#x79CD;&#x8DEF;&#x7531;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x6CA1;&#x6709;&#x96BE;&#x770B;&#x7684;#&#x53F7;&#xFF0C;url&#x4E0E;&#x540E;&#x53F0;&#x8DEF;&#x7531;&#x770B;&#x8D77;&#x6765;&#x6CA1;&#x6709;&#x5DEE;&#x522B;&#xFF0C;vue-router&#xFF0C;react-router&#x90FD;&#x652F;&#x6301;&#x8BE5;&#x6A21;&#x5F0F;</p>
 <p>&#x5B9E;&#x73B0;&#x539F;&#x7406;&#xFF1A;</p>
 <p>HTML5&#x65B0;&#x589E;&#x7684;&#x5386;&#x53F2;&#x8BB0;&#x5F55;API&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x65E0;&#x5237;&#x65B0;&#x66F4;&#x6539;&#x5730;&#x5740;&#x680F;&#x94FE;&#x63A5;&#xFF0C;&#x914D;&#x5408;Ajax&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x65E0;&#x5237;&#x65B0;&#x8DF3;&#x8F6C;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.history.pushState(<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-string">&quot;/profile/&quot;</span>)
+</code></pre>
+<p>popstate&#x4E8B;&#x4EF6;</p>
+<p>&#x5F53;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x3010;&#x524D;&#x8FDB;&#x3011;&#x3001;&#x3010;&#x540E;&#x9000;&#x3011;&#x6309;&#x94AE;&#x65F6;&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;js&#x8C03;&#x7528;back&#xFF0C;forward&#xFF0C;go&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;popstate&#x4E8B;&#x4EF6;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x8FD9;&#x4E00;&#x4E8B;&#x4EF6;&#xFF0C;&#x4ECE;&#x800C;&#x505A;&#x51FA;&#x53CD;&#x5E94;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&quot;popstate&quot;</span>,(e)=&gt;{
+    <span class="hljs-keyword">var</span> state = e.state
+})
+</code></pre>
+<p>e.state&#x5C31;&#x662F;&#x5F53;&#x521D;pushState&#x65F6;&#x4F20;&#x5165;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;state&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x53EF;&#x4EE5;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x7531;&#x4E8E;&#x706B;&#x72D0;&#x4F1A;&#x5C06;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x5728;&#x7528;&#x6237;&#x7684;&#x78C1;&#x76D8;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x7528;&#x6237;&#x5728;&#x91CD;&#x542F;&#x6D4F;&#x89C8;&#x5668;&#x4E4B;&#x540E;&#xFF0C;&#x8FD9;&#x4E9B;state&#x5BF9;&#x8C61;&#x5C31;&#x4F1A;&#x6062;&#x590D;&#x3002;</p>
 
                                 
                                 </section>
@@ -428,7 +437,7 @@ window.addEventListener('hashchange',()=>{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.4 前端路由跳转基本原理","level":"1.2.4","depth":2,"next":{"title":"2.特效","level":"1.3","depth":1,"path":"funny/README.md","ref":"funny/README.md","articles":[{"title":"2.1 自定义文字背景水印","level":"1.3.1","depth":2,"path":"funny/watermark/watermark01.md","ref":"funny/watermark/watermark01.md","articles":[]},{"title":"2.2 图片添加自定义文字水印","level":"1.3.2","depth":2,"path":"funny/watermark/watermark02.md","ref":"funny/watermark/watermark02.md","articles":[]},{"title":"2.3 自定义背景添加自定义水印","level":"1.3.3","depth":2,"path":"funny/watermark/watermark03.md","ref":"funny/watermark/watermark03.md","articles":[]},{"title":"2.4 拼图游戏","level":"1.3.4","depth":2,"path":"funny/game/puzzle.md","ref":"funny/game/puzzle.md","articles":[]}]},"previous":{"title":"1.3 http缓存机制和原理","level":"1.2.3","depth":2,"path":"optimize/http.md","ref":"optimize/http.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"optimize/router.md","mtime":"2019-08-16T08:03:42.298Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T08:33:30.022Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.4 前端路由跳转基本原理","level":"1.2.4","depth":2,"next":{"title":"2.特效","level":"1.3","depth":1,"path":"funny/README.md","ref":"funny/README.md","articles":[{"title":"2.1 自定义文字背景水印","level":"1.3.1","depth":2,"path":"funny/watermark/watermark01.md","ref":"funny/watermark/watermark01.md","articles":[]},{"title":"2.2 图片添加自定义文字水印","level":"1.3.2","depth":2,"path":"funny/watermark/watermark02.md","ref":"funny/watermark/watermark02.md","articles":[]},{"title":"2.3 自定义背景添加自定义水印","level":"1.3.3","depth":2,"path":"funny/watermark/watermark03.md","ref":"funny/watermark/watermark03.md","articles":[]},{"title":"2.4 拼图游戏","level":"1.3.4","depth":2,"path":"funny/game/puzzle.md","ref":"funny/game/puzzle.md","articles":[]}]},"previous":{"title":"1.3 http缓存机制和原理","level":"1.2.3","depth":2,"path":"optimize/http.md","ref":"optimize/http.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"optimize/router.md","mtime":"2019-08-16T09:29:10.059Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-23T08:15:33.566Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
