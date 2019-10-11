@@ -21,4 +21,5 @@
 	* [4.2 作用域](es6/scop.md)
 	* [4.3 箭头函数](es6/function.md)
 	* [4.4 对象代理](es6/proxy.md)
+	* [4.5 正则表达式](es6/reg.md)
                                

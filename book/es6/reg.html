@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4.4 对象代理 · GitBook</title>
+        <title>4.5 正则表达式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="reg.html" />
     
-    
-    <link rel="prev" href="function.html" />
+    <link rel="prev" href="proxy.html" />
     
 
     </head>
@@ -342,7 +340,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.4" data-path="proxy.html">
+        <li class="chapter " data-level="1.5.4" data-path="proxy.html">
             
                 <a href="proxy.html">
             
@@ -355,7 +353,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="reg.html">
+        <li class="chapter active" data-level="1.5.5" data-path="reg.html">
             
                 <a href="reg.html">
             
@@ -403,7 +401,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4.4 对象代理</a>
+        <a href=".." >4.5 正则表达式</a>
     </h1>
 </div>
 
@@ -418,101 +416,45 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5BF9;&#x8C61;&#x4EE3;&#x7406;">&#x5BF9;&#x8C61;&#x4EE3;&#x7406;</h1>
-<h5 id="&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x5BF9;&#x8C61;&#x4EE3;&#x7406;">&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x5BF9;&#x8C61;&#x4EE3;&#x7406;</h5>
-<p>&#x5047;&#x5982;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;<code>var obj={a:1}</code>,<code>a</code>&#x662F;&#x53EF;&#x8BFB;&#x53EF;&#x5199;&#x7684;&#xFF0C;&#x4FDD;&#x62A4;&#x4E0D;&#x4E86;&#x3002;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7684;&#x4FDD;&#x62A4;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;&#x8C61;&#x4EE3;&#x7406;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> proxy = {
-    a:<span class="hljs-number">1</span>
-}
-
-<span class="hljs-keyword">var</span> proxyer = {
-    a:<span class="hljs-number">1</span>
-}
+                                <h1 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h1>
+<h5 id="es6&#x4E2D;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7279;&#x70B9;"><code>es6</code>&#x4E2D;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7279;&#x70B9;</h5>
+<p><code>es6</code>&#x4E2D;&#xFF0C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;&#x5141;&#x8BB8;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x4FEE;&#x9970;&#x7B26;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#x53EF;&#x4EE5;&#x8986;&#x76D6;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#x3002;&#x5E76;&#x4E14;&#x901A;&#x8FC7;<code>reg.flags</code>&#x6765;&#x83B7;&#x53D6;&#x6B64;&#x4FEE;&#x9970;&#x7B26;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&apos;xyz123&apos;</span>
+<span class="hljs-keyword">let</span> regex = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">&apos;xyz&apos;</span>,<span class="hljs-string">&apos;i&apos;</span>)
+<span class="hljs-keyword">let</span> regex2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-regexp">/xyz/ig</span>,<span class="hljs-string">&apos;i&apos;</span>)
+<span class="hljs-built_in">console</span>.log(regex.test(str) , regex2.test(str))  <span class="hljs-comment">// true  treu</span>
+<span class="hljs-keyword">let</span> regex3 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-regexp">/xyz/ig</span>,<span class="hljs-string">&apos;i&apos;</span>)
+<span class="hljs-built_in">console</span>.log(regex3.test(str), regex3.flags) <span class="hljs-comment">// true &quot;i&quot;</span>
 </code></pre>
-<p>proxyer&#x662F;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EE3;&#x7406;&#x5C42;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x539F;&#x59CB;&#x6570;&#x636E;proxy&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;proxyer&#x66B4;&#x9732;&#x7ED9;&#x7528;&#x6237;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x662F;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;proxy&#x7684;&#x3002;</p>
-<h5 id="es3&#x4E2D;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;">es3&#x4E2D;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;</h5>
-<pre><code class="lang-js"><span class="hljs-comment">// &#x5BF9;sex&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;</span>
- {
-      <span class="hljs-comment">// es3</span>
-      <span class="hljs-keyword">var</span> Person = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-        <span class="hljs-keyword">var</span> data = {
-          name: <span class="hljs-string">&apos;es3&apos;</span>,
-          sex: <span class="hljs-string">&apos;male&apos;</span>,
-          age: <span class="hljs-number">15</span>
-        }
-        <span class="hljs-keyword">this</span>.get = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">key</span>) </span>{
-          <span class="hljs-keyword">return</span> data[key]
-        }
-        <span class="hljs-keyword">this</span>.set = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">key, value</span>) </span>{
-          <span class="hljs-keyword">if</span> (key !== <span class="hljs-string">&apos;sex&apos;</span>) {
-            data[key] = value
-          }
-        }
-      }
-      <span class="hljs-keyword">var</span> person = <span class="hljs-keyword">new</span> Person()
-      person.set(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;es3-cname&apos;</span>)
-      person.set(<span class="hljs-string">&apos;sex&apos;</span>, <span class="hljs-string">&apos;female&apos;</span>)
-      person.set(<span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-number">20</span>)
-      <span class="hljs-built_in">console</span>.table({
-        name: person.get(<span class="hljs-string">&apos;name&apos;</span>), <span class="hljs-comment">//es3-cname</span>
-        sex: person.get(<span class="hljs-string">&apos;sex&apos;</span>), <span class="hljs-comment">//male</span>
-        age: person.get(<span class="hljs-string">&apos;age&apos;</span>) <span class="hljs-comment">//20</span>
-      })
-    }
+<h5 id="es6&#x4E2D;&#x7684;y&#x4FEE;&#x9970;&#x7B26;">es6&#x4E2D;&#x7684;y&#x4FEE;&#x9970;&#x7B26;</h5>
+<p><code>y</code>&#x4FEE;&#x9970;&#x7B26;&#x548C;<code>g</code>&#x4FEE;&#x9970;&#x7B26;&#x7C7B;&#x4F3C;&#xFF0C;&#x90FD;&#x662F;&#x7528;&#x6765;&#x505A;&#x5168;&#x5C40;&#x5339;&#x914D;&#x7684;&#x3002;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;<code>g</code>&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x4E0B;&#x6B21;&#x5339;&#x914D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x63A5;&#x7740;&#x4E0A;&#x6B21;&#x7684;&#x4F4D;&#x7F6E;&#x7EE7;&#x7EED;&#x5BFB;&#x627E;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x5339;&#x914D;&#x5230;&#x7684;&#x4E3A;&#x6B62;&#x3002;&#x800C;<code>y</code>&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x4F1A;&#x63A5;&#x7740;&#x5339;&#x914D;&#x4E0A;&#x6B21;&#x7684;&#x4F4D;&#x7F6E;&#x540E;&#x9762;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> s = <span class="hljs-string">&apos;bbb_bb_b&apos;</span>;
+<span class="hljs-keyword">let</span> a1 = <span class="hljs-regexp">/b+/g</span>;
+<span class="hljs-keyword">let</span> a2 = <span class="hljs-regexp">/b+/y</span>;
+<span class="hljs-built_in">console</span>.log(a1.exec(s), a2.exec(s)); 
+<span class="hljs-comment">// [&quot;bbb&quot;, index: 0, input: &quot;bbb_bb_b&quot;, groups: undefined]</span>
+<span class="hljs-comment">// [&quot;bbb&quot;, index: 0, input: &quot;bbb_bb_b&quot;, groups: undefined]</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;two&apos;</span>, a1.exec(s), <span class="hljs-string">&apos;two&apos;</span>, a2.exec(s));
+<span class="hljs-comment">// two [&quot;bb&quot;, index: 4, input: &quot;bbb_bb_b&quot;, groups: undefined] two null</span>
 </code></pre>
-<h5 id="es5&#x4E2D;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;">es5&#x4E2D;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;</h5>
-<pre><code class="lang-js"><span class="hljs-comment">// &#x5BF9;sex&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;</span>
-{
-      <span class="hljs-comment">// es5</span>
-      <span class="hljs-keyword">var</span> person = {
-        name: <span class="hljs-string">&apos;es5&apos;</span>,
-        age: <span class="hljs-number">15</span>
-      }
-
-      <span class="hljs-built_in">Object</span>.defineProperty(person, <span class="hljs-string">&apos;sex&apos;</span>, {
-        value: <span class="hljs-string">&apos;male&apos;</span>,
-        writable: <span class="hljs-literal">false</span>
-      })
-
-      person.name = <span class="hljs-string">&quot;es5-cname&quot;</span>
-      person.sex = <span class="hljs-string">&apos;female&apos;</span>
-      <span class="hljs-built_in">console</span>.table({
-        name: person.name, <span class="hljs-comment">//es5-cname</span>
-        sex: person.sex, <span class="hljs-comment">//male</span>
-        age: person.age <span class="hljs-comment">//20</span>
-      })
-    }
+<blockquote>
+<p>&#x89E3;&#x6790;&#xFF1A;<code>a1</code>&#x548C;<code>a2</code>&#x7B2C;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x540E;&#xFF0C;&#x5339;&#x914D;&#x7684;&#x90FD;&#x662F;<code>bbb</code>&#x3002;&#x7B2C;&#x4E8C;&#x6B21;&#x5339;&#x914D;&#x7684;&#x65F6;&#x5019;&#xFF0C;<code>a1</code>&#x662F;&#x4ECE;<code>_bb_b</code>_&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x7EE7;&#x7EED;&#x5339;&#x914D;&#xFF0C;&#x76F4;&#x5230;&#x5339;&#x914D;&#x5230;&#x4E86;&#xFF0C;&#x8FD4;&#x56DE;<code>bb</code>&#x3002;&#x800C;<code>a2</code>&#x4E5F;&#x662F;&#x4ECE;<code>_bb_b</code>&#x5F00;&#x59CB;&#x5339;&#x914D;&#xFF0C;&#x4F46;&#x662F;&#x53D1;&#x73B0;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;_&#xFF0C;&#x4E0D;&#x5339;&#x914D;<code>/b+/</code>&#x8FD9;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x8FD4;&#x56DE;&#x4E86;<code>null</code></p>
+</blockquote>
+<h5 id="&#x68C0;&#x6D4B;&#x6B63;&#x5219;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;&#x5E26;y&#x7684;&#x4FEE;&#x9970;&#x7B26;">&#x68C0;&#x6D4B;&#x6B63;&#x5219;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;&#x5E26;<code>y</code>&#x7684;&#x4FEE;&#x9970;&#x7B26;</h5>
+<p>&#x7528;<code>sticky</code>&#x6765;&#x68C0;&#x6D4B;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;<code>y</code>&#x4FEE;&#x9970;&#x7B26;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> a1 = <span class="hljs-regexp">/b+/g</span>
+<span class="hljs-keyword">let</span> a2 = <span class="hljs-regexp">/b+/y</span>
+<span class="hljs-built_in">console</span>.log(a1.sticky, a2.sticky) <span class="hljs-comment">//false true</span>
 </code></pre>
-<h5 id="es6&#x4E2D;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;">es6&#x4E2D;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;</h5>
-<pre><code class="lang-js"><span class="hljs-comment">// &#x5BF9;sex&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;</span>
-{
-      <span class="hljs-comment">// es6</span>
-      <span class="hljs-keyword">let</span> person = {
-        name: <span class="hljs-string">&apos;es6&apos;</span>,
-        age: <span class="hljs-number">15</span>,
-        sex: <span class="hljs-string">&apos;male&apos;</span>
-      }
+<h5 id="es6&#x4E2D;&#x7684;u&#x4FEE;&#x9970;&#x7B26;">es6&#x4E2D;&#x7684;u&#x4FEE;&#x9970;&#x7B26;</h5>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x9700;&#x8981;&#x8BC6;&#x522B;<code>Unicode</code>&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x9700;&#x8981;&#x7528;&#x5230;<code>u</code>&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x5B57;&#x7B26;&#x5927;&#x4E8E;2&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x4E5F;&#x9700;&#x8981;&#x7528;&#x5230;<code>u</code>&#x4FEE;&#x9970;&#x7B26;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-regexp">/\u{61}/</span>.test(<span class="hljs-string">&apos;a&apos;</span>))  <span class="hljs-comment">// false</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-regexp">/\u{61}/u</span>.test(<span class="hljs-string">&apos;a&apos;</span>)) <span class="hljs-comment">// true</span>
 
-      <span class="hljs-keyword">let</span> personer = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>(person, {
-        get(target, key) {
-          <span class="hljs-keyword">return</span> target[key]
-        },
-        set(target, key, value) {
-          <span class="hljs-keyword">if</span> (key !== <span class="hljs-string">&apos;sex&apos;</span>) {
-            <span class="hljs-keyword">return</span> target[key] = value
-          }
-        }
-      })
-
-      personer.name = <span class="hljs-string">&apos;es6-cname&apos;</span>
-      personer.sex = <span class="hljs-string">&apos;female&apos;</span>
-      <span class="hljs-built_in">console</span>.table({
-        name: personer.name, <span class="hljs-comment">// es6-cname</span>
-        age: personer.age, <span class="hljs-comment">// 15</span>
-        sex: personer.sex <span class="hljs-comment">// male</span>
-      })
-
-    }
+<span class="hljs-built_in">console</span>.log(<span class="hljs-regexp">/^\uD83D/</span>.test(<span class="hljs-string">&apos;\uD83D\uDC2A&apos;</span>)) 
+ <span class="hljs-comment">// true  &#x56E0;&#x4E3A;test&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F1A;&#x88AB;&#x5F53;&#x505A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x53BB;&#x5339;&#x914D;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-regexp">/^\uD83D/u</span>.test(<span class="hljs-string">&apos;\uD83D\uDC2A&apos;</span>))
+<span class="hljs-comment">// false  &#x56E0;&#x4E3A;&#x8868;&#x8FBE;&#x5F0F;&#x91CC;&#x9762; &#x4F1A;&#x88AB;&#x89E3;&#x6790;&#x6210;&#x4E00;&#x4E2A;Unicode&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x800C;test&#x91CC;&#x9762;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x4E00;&#x4E32;&#x5B57;&#x7B26;&#x4E32;</span>
 </code></pre>
 
                                 
@@ -541,14 +483,10 @@
 
             
                 
-                <a href="function.html" class="navigation navigation-prev " aria-label="Previous page: 4.3 箭头函数">
+                <a href="proxy.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 4.4 对象代理">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="reg.html" class="navigation navigation-next " aria-label="Next page: 4.5 正则表达式">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -557,7 +495,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.4 对象代理","level":"1.5.4","depth":2,"next":{"title":"4.5 正则表达式","level":"1.5.5","depth":2,"path":"es6/reg.md","ref":"es6/reg.md","articles":[]},"previous":{"title":"4.3 箭头函数","level":"1.5.3","depth":2,"path":"es6/function.md","ref":"es6/function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/proxy.md","mtime":"2019-10-09T03:51:51.927Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-11T10:17:31.715Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.5 正则表达式","level":"1.5.5","depth":2,"previous":{"title":"4.4 对象代理","level":"1.5.4","depth":2,"path":"es6/proxy.md","ref":"es6/proxy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/reg.md","mtime":"2019-10-11T08:40:15.895Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-11T10:17:31.715Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
