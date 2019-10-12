@@ -20,6 +20,7 @@
       text-align: center;
       line-height: 100px;
       font-size: 30px;
+	  color:#ddd;
     }
 
     .puzzle div:nth-child(1) {
