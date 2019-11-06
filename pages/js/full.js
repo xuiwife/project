@@ -1,29 +1,58 @@
-;(function(w){
-	const defaults = {
-		current:0
-	}
-	
-	const wrapper = document.querySelector('.full');
-	const children = wrapper.children;
-	const cur = children[0]
-	const pre = cur.previousElementSibling;
-	const next = cur.nextElementSibling;
-	cur.style.transform='translateY(0)';
-	
-	function move(tar,dir) {
-		const prev = tar.previousElementSibling;
-		const next = tar.nextElementSibling;
-		console.log('next',next)
-		let cur = null
-		cur = dir > 0? next : prev,
-		console.log('cur',cur)
-		cur.style.transform="translateY(0)"
-		tar.style.transform="translateY(-100%)"
-	}
-	
-	window.onwheel = function(e) {
-		const dir = e.deltaY > 0 ? 1 : -1;
-		move(cur,dir)
+;
+(function(w) {
+	w.onwheel = function(e) {
+		const dir = e.deltaY > 0 ? 'showNext' : 'showPrev';
+		const tar = getParentEle(e);
+		move(tar, dir)
 	}
 
+	function move(tar, dir) {
+		const prev = tar.previousElementSibling;
+		const next = tar.nextElementSibling;
+		if (dir === 'showNext') {
+			if (!next) return;
+			next.style.display = "flex";
+			next.classList.add('show_animation')
+		} else {
+			if (!prev) return;
+			prev.style.display = "flex";
+			prev.classList.add('show_animation')
+		}
+		tar.style.display = "none";
+		tar.classList.remove('show_animation')
+	}
+
+	function getParentEle(e) {
+		let parentEle = e.target;
+		while (!parentEle.classList.contains('sub_wrapper')) {
+			console.log(1)
+			parentEle = parentEle.parentNode
+		}
+		return parentEle;
+	}
+
+	const divList = document.querySelector('.full').children;
+	for (const item of divList) {
+		item.classList.add('sub_wrapper')
+		item.style.display = "none"
+	}
+	divList[0].style.display = 'flex';
+	divList[0].classList.add('show_animation')
+
+	/*为什么这么写会有问题*/
+	// let i = 0;
+	// const divList = document.querySelector('.full').children;
+	// for (const item of divList) {
+	// 	item.style.display = "none"
+	// }
+	// divList[0].style.display = 'flex'
+	// window.onwheel = function() {
+	// 	i++;
+	// 	if (i > divList.length) return;
+	// 	for (const item of divList) {
+	// 		item.style.display = "none"
+	// 	}
+	// 	divList[i].style.display = "flex"
+
+	// }
 })(window)
