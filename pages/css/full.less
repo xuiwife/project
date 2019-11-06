@@ -22,17 +22,17 @@
 		align-items: center;
 		flex-direction: column;
 		& > *:nth-child(n) {
-			transform: translateX(-100vw);	
+      transform: translateX(-100vw);
+      transition: .6s ease-out;
 		}
 		& > *:nth-child(2n) {
-			transform: translateX(100vw);
+      transform: translateX(100vw);
+      transition: .6s ease-out;
 		}
 	}
 
 	.show_animation > *:nth-child(n) {
-		transition-delay: 1s;
-		// transform: translateX(0);
-		// transition-delay: 1s; 
-
+		transition-delay: .3s;
+		transform: translateX(0);
 	}
 }
