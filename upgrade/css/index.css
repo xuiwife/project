@@ -204,7 +204,7 @@ ol li {
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	background: url('http://chuantu.xyz/t6/703/1572861841x1031866013.png');
+	background: url('../images/bg.png');
 }
 
 .li_full_page>div:nth-child(n)>*:nth-child(n),
@@ -439,24 +439,24 @@ code {
 }
 
 .item.item01 {
-	background: url('http://chuantu.xyz/t6/703/1572861926x1031866013.png') no-repeat center center;
+	background: url('../images/item01.png') no-repeat center center;
 	background-size: contain;
 }
 
 .item.item02 {
 	text-indent: 8rem;
-	background: url('http://chuantu.xyz/t6/703/1572861959x1031866013.png') no-repeat center center;
+	background: url('../images/item02.png') no-repeat center center;
 	background-size: contain;
 }
 
 .item.item03 {
-	background: url('http://chuantu.xyz/t6/703/1572861978x1031866013.png') no-repeat center center;
+	background: url('../images/item03.png') no-repeat center center;
 	background-size: contain;
 }
 
 .item.item04 {
 	text-indent: 8rem;
-	background: url('http://chuantu.xyz/t6/703/1572861999x2890211945.png') no-repeat center center;
+	background: url('../images/item04.png') no-repeat center center;
 	background-size: contain;
 }
 
