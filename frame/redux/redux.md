@@ -13,12 +13,12 @@
 
 图二：<br>
 ![avatar](./images/redux03.png)<br>
-用有爱的服务解释一下：把React Components看做一个客官。去舞厅找小姐姐的时候，首先会去找妈妈桑（ActionCreaturs），告诉他你要找xxx小姐。妈妈桑去舞厅（store）看看，没有找到你需要的小姐姐，然后会去叫主管（Reducers）找小姐姐，找到小姐姐后，把她带到舞厅（Store）去。然后你就可以在舞厅找到你需要的小姐姐了。<br>
+用有爱的服务解释一下：把`React Components`看做一个客官。去舞厅找小姐姐的时候，首先会去找妈妈桑（`ActionCreaturs`），告诉他你要找xxx小姐。妈妈桑去舞厅（`store`）看看，没有找到你需要的小姐姐，然后会去叫主管（`Reducers`）找小姐姐，找到小姐姐后，把她带到舞厅（`store`）去。然后你就可以在舞厅找到你需要的小姐姐了。<br>
 
 图三：<br>
 ![avatar](./images/redux04.png)<br>
 换个角度再解释一下：<br>
-React Componets看成一个借书者。先去管理员（ActionCreaturs）询问是否有xxx这本书，图书馆管理员（ActionCreaturs）去图书馆（store）里面没有找到，就去软件（reducers）上查询一下。得到的结果，是在图书馆（store）的xxx地方。然后就可以找到你需要的那本书了。<br>
+`React Componets`看成一个借书者。先去管理员（`ActionCreaturs`）询问是否有xxx这本书，图书馆管理员（`ActionCreaturs`）去图书馆（`store`）里面没有找到，就去软件（`reducers`）上查询一下。得到的结果，是在图书馆（`store`）的xxx地方。然后就可以找到你需要的那本书了。<br>
 
 图四：<br>
 ![avatar](./images/redux05.png)<br>
