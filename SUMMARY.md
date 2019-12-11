@@ -25,4 +25,7 @@
 
 * [5.概念](concept/README.md)
 	* [5.1 两大编程思想](concept/program.md)
+
+* [6.框架&&状态管理](frame/README.md)
+	* [6.1 Redux](frame/redux/README.md)
                                
