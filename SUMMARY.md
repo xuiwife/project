@@ -28,4 +28,6 @@
 
 * [6.框架&&状态管理](frame/README.md)
 	* [6.1 Redux](frame/redux/redux.md)
+
+* [7.锻炼身体](exercise/README.md)
                                
