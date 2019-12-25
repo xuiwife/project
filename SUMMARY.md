@@ -31,6 +31,7 @@
 	* [6.2 TypeScript]()
 		* [6.2.1 TS简介](frame/TypeScript/ts.md)
 		* [6.2.2 环境搭建](frame/TypeScript/helloWorld.md)
+		* [6.2.3 数据类型](frame/TypeScript/types.md)
 
 * [7.锻炼身体](exercise/README.md)
                                

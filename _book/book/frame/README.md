@@ -2,4 +2,5 @@
 #### Redux
 #### React
 #### Vue
+#### TypeScript
 #### Flutter
