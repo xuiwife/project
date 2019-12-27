@@ -28,8 +28,7 @@ npm i @types/node --save-dev
 ![avatar](./images/01.png)
 
 ##### 构建
-vscode---->运行任务---->tsc：构建-tsconfig.js,会生成一个`helloworld.js`文件
+vscode编辑器---->运行任务---->tsc：监听-tsconfig.js,会生成一个`helloworld.js`文件，并自动编译成js文件。
 
 ##### 运行
-在终端输入 `node helloworld.js`查看结果<br>
-![avatar](./images/02.jpg)
+在html中引入的时候，引入编译后的js文件，就可以在浏览器中运行了。
