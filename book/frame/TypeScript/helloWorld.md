@@ -25,7 +25,7 @@ npm i @types/node --save-dev
 </code>
 
 ##### 编写helloWorld.ts
-![avatar](./images/01.png)
+![avatar](./images/types/01.png)
 
 ##### 构建
 vscode编辑器---->运行任务---->tsc：监听-tsconfig.js,会生成一个`helloworld.js`文件，并自动编译成js文件。
