@@ -34,5 +34,7 @@
 		* [6.2.3 数据类型](frame/TypeScript/types.md)
 		* [6.2.4 函数](frame/TypeScript/function.md)
 
-* [7.锻炼身体](exercise/README.md)
+* [7.JavaScript]()
+	* [7.1 继承](javascript/inherit.md)
+* [8.锻炼身体](exercise/README.md)
                                
