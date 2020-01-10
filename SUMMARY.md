@@ -19,6 +19,9 @@
 	* [3.4 函数](typescript/function.md)
 	* [3.5 类](typescript/class.md)
 	* [3.6 静态方法/属性的定义](typescript/static.md)
+	* [3.7 多肽](typescript/polypeptide.md)
+	* [3.8 抽象类](typescript/abstract.md)
+	* [3.9 接口](typescript/interface.md)
 
 * [4.优化](optimize/README.md)
     * [4.1 防抖 debounce](optimize/debounce.md)
