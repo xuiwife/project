@@ -34,6 +34,6 @@
 ![avatar](./images/interface/08.png)
 
 #### 接口扩展
-接口的扩展实质上就是接口的继承<br>
+接口的扩展直白点的理解就是接口可以继承接口<br>
 ![avatar](./images/interface/09.png)<br>
 ![avatar](./images/interface/10.png)

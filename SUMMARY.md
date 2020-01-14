@@ -22,6 +22,7 @@
 	* [3.7 多肽](typescript/polypeptide.md)
 	* [3.8 抽象类](typescript/abstract.md)
 	* [3.9 接口](typescript/interface.md)
+	* [3.10 泛型](typescript/genericity.md)
 
 * [4.优化](optimize/README.md)
     * [4.1 防抖 debounce](optimize/debounce.md)
