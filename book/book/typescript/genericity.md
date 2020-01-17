@@ -10,3 +10,9 @@
 
 ##### 泛型类
 ![avatar](./images/genericity/02.png)
+
+##### 泛型接口
+ ###### 方法一
+ ![avatar](./images/genericity/03.png)
+ ###### 方法二
+ ![avatar](./images/genericity/04.png)
